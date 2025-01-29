@@ -1,0 +1,154 @@
+@import "mocha.css";
+/* Dark Theme with Red Highlights */
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 16px;
+    min-height: 0;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+
+window#waybar {
+    background: rgba(0,0,0,0.3);
+    transition-property: background-color, border-radius;
+    transition-duration: 0.1s;
+}
+
+#custom-window{
+    margin-left: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #E0E0E0;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+
+}
+#custom-player{
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #1DB954;
+    color: rgb(56, 17, 17);
+    border: 2px solid #1DB954;
+    border-radius: 10px;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+    color: @mauve;
+    border-top: 2px solid @mauve;
+}
+
+#workspaces button {
+    padding: 0 4px;
+    color: #888;
+    background: transparent;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+#workspaces button.focused {
+    border: 2px solid cyan;
+    border-radius: 5px;
+}
+#workspaces button.active {
+    border: 2px solid red;
+    border-radius: 5px;
+}
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#pulseaudio,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#wireplumber,
+#tray,
+#network,
+#mode,
+#scratchpad {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#clock {
+    color: @maroon;
+    border: 2px solid @maroon;
+    border-radius: 10px;
+}
+
+#clock.date {
+    color: @mauve;
+    border: 2px solid @mauve;
+    border-radius: 10px;
+}
+
+#pulseaudio {
+    color: @blue;
+    border: 2px solid @blue;
+    border-radius: 10px;
+}
+
+#network {
+    color: @yellow;
+    border: 2px solid @yellow;
+    border-radius: 10px;
+}
+
+#idle_inhibitor {
+    margin-right: 12px;
+    color: #7cb342;
+}
+
+#idle_inhibitor.activated {
+    color: @red;
+}
+
+#battery {
+    color: @green;
+    border: 2px solid @green;
+    border-radius: 10px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
+}
+
+#custom-vpn {
+    color: @lavender;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+tooltip {
+    font-size: 14px;
+    background: #1b061b;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 0;
+    border-radius: 10px
+}
