@@ -13,27 +13,13 @@ if [[ -z "$active_window" || "$active_window" == "null" ]]; then
 else
   # Customize the output with an icon (add more icons as needed)
   case "$active_window" in
-    "brave-browser")
-      echo " Brave"
-      ;;
-    "code")
-      echo " VS Code"
-      ;;
-    "kitty")
-      echo " Terminal"
-      ;;
-    "dolphin")
-      echo " File Manager"
-      ;;
-    "spotify")
-      echo " Spotify"
-      ;;
-    "android-studio")
-      echo " Android Studio"
-      ;;
-    "discord")
-      echo "ﭮ Discord"
-      ;;
+    "Brave-browser") echo " Brave";;
+    "Code") echo " VS-Code";;
+    "kitty") echo " Terminal";;
+    "dolphin") echo " File Manager";;
+    "Spotify") echo " Spotify";;
+    "Android-Studio")echo " Android Studio" ;;
+    "org.telegram.desktop") echo " Telegram";;
     *)
       echo "$active_window" # Fallback: just show the program name
       ;;
