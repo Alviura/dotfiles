@@ -1,4 +1,28 @@
-@import "mocha.css";
+/* Define Pywal colors */
+@define-color foreground #dfdfdf;
+@define-color background #0b0b0b;
+@define-color cursor #dfdfdf;
+
+@define-color color0 #0b0b0b;
+@define-color color1 #737272;
+@define-color color2 #837475;
+@define-color color3 #8D8C8C;
+@define-color color4 #A19F9F;
+@define-color color5 #ACABAB;
+@define-color color6 #C0BFBF;
+@define-color color7 #dfdfdf;
+@define-color color8 #9c9c9c;
+@define-color color9 #737272;
+@define-color color10 #837475;
+@define-color color11 #8D8C8C;
+@define-color color12 #A19F9F;
+@define-color color13 #ACABAB;
+@define-color color14 #C0BFBF;
+@define-color color15 #dfdfdf;
+
+/* Define scarlet red */
+@define-color scarlet-red #ff2400;
+
 /* Dark Theme with Red Highlights */
 * {
     font-family: "JetbrainsMono Nerd Font", "FiraCode Nerd Font";
@@ -10,29 +34,29 @@
     box-shadow: none;
 }
 
-
 window#waybar {
-    background: rgba(0,0,0,0.3);
+    background: transparent;
+    color: @foreground; 
     transition-property: background-color, border-radius;
     transition-duration: 0.1s;
 }
 
-#custom-window{
-    font-family: "FiraCode Nerd Font", sans-serif;
+#custom-window {
     margin-left: 10px;
     padding-left: 8px;
     padding-right: 8px;
-    background: #E0E0E0;
-    border: 2px solid #E0E0E0;
+    background: @color4;
+    color: @background; 
+    border: 2px solid @color4; 
     border-radius: 10px;
-
 }
-#custom-player{
+
+#custom-player {
     padding-left: 8px;
     padding-right: 8px;
-    background: #1DB954;
-    color: rgb(56, 17, 17);
-    border: 2px solid #1DB954;
+    background: @color2; 
+    color: @background; 
+    border: 2px solid @color2; 
     border-radius: 10px;
 }
 
@@ -44,28 +68,29 @@ button {
 
 button:hover {
     background: inherit;
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    color: @scarlet-red; 
+    border-top: 2px solid @scarlet-red; 
 }
 
 #workspaces button {
     padding: 0 4px;
-    color: #888;
+    color: @color8; 
     background: transparent;
     border: 2px solid transparent;
     transition: border-color 0.3s ease;
 }
 
 #workspaces button.focused {
-    border: 2px solid cyan;
+    border: 2px solid @color6; 
     border-radius: 5px;
 }
+
 #workspaces button.active {
-    border: 2px solid red;
+    border: 2px solid @scarlet-red;
     border-radius: 5px;
 }
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: @scarlet-red;
 }
 
 #pulseaudio,
@@ -81,65 +106,100 @@ button:hover {
 #network,
 #mode,
 #scratchpad {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #clock {
-    color: @maroon;
-    border: 2px solid @maroon;
+    color: @color14; 
+    border: 2px solid @color14; 
     border-radius: 10px;
 }
 
-#clock.date {
-    color: @mauve;
-    border: 2px solid @mauve;
-    border-radius: 10px;
-}
 
 #pulseaudio {
-    color: @blue;
-    border: 2px solid @blue;
+    color: @color14; 
+    border: 2px solid @color14;
     border-radius: 10px;
 }
 
 #network {
-    color: @yellow;
-    border: 2px solid @yellow;
+    color: @color14; 
+    border: 2px solid @color14; 
     border-radius: 10px;
 }
 
 #idle_inhibitor {
     margin-right: 12px;
-    color: #7cb342;
+    color: @color10; 
 }
 
 #idle_inhibitor.activated {
-    color: @red;
+    color: @scarlet-red;
 }
 
 #battery {
-    color: @green;
-    border: 2px solid @green;
+    color: @color14; 
+    border: 2px solid @color4; 
     border-radius: 10px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
+#battery.critical {
+    color: @scarlet-red;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
+#cpu {
+    background: @color4;
+    color: @background;
+    border: 2px solid @color4;
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 12px
+}
+
+#cpu.critical {
+    color: @scarlet-red;
+    border-color: @scarlet-red; 
+}
+
+
+#memory {
+    background: @color4;
+    color: @background;
+    border: 2px solid @color4;
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 2px 4px;
+}
+
+#memory.critical {
+    color: @scarlet-red; 
+    border-color: @scarlet-red;
+}
+
+#disk {
+    background: @color4;
+    color: @background;
+    border: 2px solid @color4;
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 2px 4px;
+}
+
+#disk.critical {
+    color: @scarlet-red;
+    border-color: @scarlet-red;
 }
 
 #custom-vpn {
-    color: @lavender;
+    color: @color5; 
     border-radius: 15px;
     padding-left: 6px;
     padding-right: 6px;
@@ -147,9 +207,10 @@ button:hover {
 
 tooltip {
     font-size: 14px;
-    background: #1b061b;
+    background: @background; 
+    color: @foreground; 
     padding-right: 5px;
     padding-left: 5px;
     margin: 0;
-    border-radius: 10px
+    border-radius: 10px;
 }
