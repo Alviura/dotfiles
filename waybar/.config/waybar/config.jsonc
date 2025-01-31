@@ -3,7 +3,10 @@
   // "spacing": "4px",
   "modules-left": [ 
 	  "hyprland/workspaces",
-	  "custom/window"
+	  "custom/window",
+	  "cpu",
+	  "memory",
+	  "disk"
 	  
   ],
 
@@ -11,9 +14,6 @@
 	  "custom/player"
 ],
   "modules-right": [
-	  "cpu",
-	  "memory",
-	  "disk",
 	  "network", 
 	  "pulseaudio", 
 	  "battery", 
