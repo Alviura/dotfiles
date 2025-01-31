@@ -1,10 +1,10 @@
 {
   "position": "top",
   // "spacing": "4px",
-  "font_family": "FiraCode Nerd Font",
-  "modules-left": [
+  "modules-left": [ 
 	  "hyprland/workspaces",
 	  "custom/window"
+	  
   ],
 
   "modules-center": [
