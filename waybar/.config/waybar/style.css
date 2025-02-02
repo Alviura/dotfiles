@@ -42,6 +42,8 @@ window#waybar {
 }
 
 #custom-window {
+    margin-top: 2px;
+    margin-bottom: 2px;
     margin-left: 10px;
     padding-left: 8px;
     padding-right: 8px;
@@ -52,6 +54,7 @@ window#waybar {
 }
 
 #custom-player {
+    margin: 2px 0px;
     padding-left: 8px;
     padding-right: 8px;
     background: @color2; 
@@ -92,9 +95,10 @@ button:hover {
 #workspaces button.urgent {
     background-color: @scarlet-red;
 }
-
+#custom-updater,
 #pulseaudio,
 #clock,
+#backlight,
 #battery,
 #cpu,
 #memory,
@@ -112,6 +116,13 @@ button:hover {
     margin-right: 4px;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+#custom-updater {
+    background: @color4;
+    color: @background;
+    border: 2px solid @color14;
+    border-radius: 10px;
 }
 
 #clock {
@@ -142,6 +153,12 @@ button:hover {
     color: @scarlet-red;
 }
 
+#backlight {
+    color: @color14;
+    border: 2px solid @color4;
+    border-radius: 10px;
+}
+
 #battery {
     color: @color14; 
     border: 2px solid @color4; 
@@ -159,7 +176,7 @@ button:hover {
     border-radius: 10px;
     padding-left: 8px;
     padding-right: 8px;
-    margin-left: 12px
+    margin-left: 8px
 }
 
 #cpu.critical {
