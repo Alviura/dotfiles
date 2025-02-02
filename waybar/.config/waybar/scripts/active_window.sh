@@ -14,11 +14,11 @@ else
   # Customize the output with an icon (add more icons as needed)
   case "$active_window" in
     "Brave-browser") echo " Brave";;
-    "Code") echo " VS-Code";;
+    "code-oss") echo " VS-Code";;
     "kitty") echo " Terminal";;
     "dolphin") echo " File Manager";;
     "Spotify") echo " Spotify";;
-    "Android-Studio")echo " Android Studio" ;;
+    "jetbrains-studio")echo " Android Studio" ;;
     "org.telegram.desktop") echo " Telegram";;
     *)
       echo "$active_window" # Fallback: just show the program name
