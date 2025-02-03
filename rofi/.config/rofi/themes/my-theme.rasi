@@ -2,7 +2,7 @@
     /* Global Colors */
     background-color: #0b0b0b;  /* Dark gray background */
     text-color: #dfdfdf;        /* Light gray text */
-    border-color: #a19f9f;  /* Dim purple for borders */
+    border-color: #a19f9f;  /* Dim white for window border */
     font: "JetBrainsMono Nerd Font 12";
     width: 450px;
 }
@@ -20,6 +20,7 @@ window {
 inputbar {
     children: [entry];
     font: @font;
+    margin-top: 10px;
     padding: 5px;
     background-color: @background-color;
 }
@@ -37,7 +38,7 @@ entry {
 /* List View */
 listview {
     padding: 5px;
-    margin: 10px 0px 10px;
+    margin: 5px 0px 10px;
     lines: 7;
     fixed-height: false;
     border: 0px;
@@ -54,5 +55,5 @@ element selected {
     background-color: transparent;
     border: 2px solid ;
     border-radius: 5px;
-    border-color: #990000;  /* Dim purple border for selection */
+    border-color: #990000; /* blood red */
 }
