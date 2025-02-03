@@ -1,0 +1,58 @@
+* {
+    /* Global Colors */
+    background-color: #0b0b0b;  /* Dark gray background */
+    text-color: #dfdfdf;        /* Light gray text */
+    border-color: #a19f9f;  /* Dim purple for borders */
+    font: "JetBrainsMono Nerd Font 12";
+    width: 450px;
+}
+
+/* Window Settings */
+window {
+    background-color: @background-color;
+    border: 3px solid;
+    border-color: @border-color;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Input Bar */
+inputbar {
+    children: [entry];
+    font: @font;
+    padding: 5px;
+    background-color: @background-color;
+}
+
+entry {
+    border: 1px solid;
+    border-color: @border-color;
+    border-radius: 5px;
+    placeholder: " ";
+    font-family: @font;
+    padding: 10px;
+    text-color: @text-color;
+}
+
+/* List View */
+listview {
+    padding: 5px;
+    margin: 10px 0px 10px;
+    lines: 7;
+    fixed-height: false;
+    border: 0px;
+    spacing: 10px;
+}
+
+/* List Items */
+element {
+    font-family: @font;
+    padding: 10px;
+}
+
+element selected { 
+    background-color: transparent;
+    border: 2px solid ;
+    border-radius: 5px;
+    border-color: #990000;  /* Dim purple border for selection */
+}
