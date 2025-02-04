@@ -89,11 +89,14 @@ button:hover {
 }
 
 #workspaces button.active {
-    border: 2px solid @scarlet-red;
+    border: 2px solid @color4;
     border-radius: 5px;
 }
 #workspaces button.urgent {
     background-color: @scarlet-red;
+    border: 2px solid @scarlet-red;
+    border-radius: 5px;
+    color: @background; 
 }
 #custom-updater,
 #pulseaudio,
